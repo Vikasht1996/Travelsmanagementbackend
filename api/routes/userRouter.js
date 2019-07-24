@@ -21,7 +21,7 @@ const routes = (app) => {
               check('Email').not().isEmpty().trim().withMessage('Email is requierd'),
               check('Password').isLength({ max : 8 }).withMessage('Password must have more than 5 characters'),
               check('ConfirmPassword').not().isEmpty().trim().withMessage('Password does not match'),
-              check('Phonenumber').not().isEmpty().trim(),
+              check('Mobilenumber').not().isEmpty().trim(),
             ],signup,(req, res) => {
                 const errors = validationResult(req);
                 if (!errors.isEmpty()) {
@@ -33,7 +33,7 @@ const routes = (app) => {
                 Email: req.body.Email,
                 Password: req.body.Password,
                 ConfirmPassword:req.body.ConfirmPassword,
-                Phonenumber:req.body.Phonenumber
+                Mobilenumber:req.body.Mobilenumber
 
                 }               
                 ).then(user => res.json(user));

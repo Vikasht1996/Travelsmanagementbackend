@@ -29,7 +29,7 @@ const DownloadSchema = new Schema({
         required: 'Password does not match',
 
     },
-    Phonenumber:{
+    Mobilenumber:{
         type:String,
         required:"Phone number is required"
     },

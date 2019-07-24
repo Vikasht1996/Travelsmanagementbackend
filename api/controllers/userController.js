@@ -14,7 +14,8 @@ exports.signup = function(req, res){
     }
     else
     { 
-            if (req.body.password) {
+      if(req.body.password)
+      {
               res.send("password does not match");
             }
             var user = new User(req.body);
