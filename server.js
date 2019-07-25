@@ -2,11 +2,9 @@ import express from 'express'
 import routes from './api/routes/userRouter'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
-const cors = require('cors')
 
 const app = express()
 const PORT = 8000
-app.use(cors())
 
  
 mongoose.Promise = global.Promise;

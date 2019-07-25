@@ -17,7 +17,7 @@ const DownloadSchema = new Schema({
         type: String,
         // unique: true,        
         required: 'Email is required',
-        match:/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/,
+        // match:/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/,
     },
     
     Password: {
