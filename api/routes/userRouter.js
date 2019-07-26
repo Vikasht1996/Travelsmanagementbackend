@@ -1,4 +1,6 @@
-import { signup,login} from '../controllers/userController'
+import { signup,login,} from '../controllers/userController'
+import {location} from '../controllers/locationController'
+
 const { check,validationResult } = require('express-validator/check')
 
 // import { check ,validationResult} from 'express-validator/check'
@@ -6,6 +8,8 @@ const { check,validationResult } = require('express-validator/check')
 const routes = (app) => {
     app.route('/login')
     .post(login)
+    app.route('/location')
+    .post(location)
     // .delete(delete_Data)
         app.post('/signup',
             // [
@@ -42,6 +46,7 @@ const routes = (app) => {
               //  app.route('/assessment/:id')
               //  .put(update_Data)           
 }
+
 export default routes
 
 

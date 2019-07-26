@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 import downloadSchema from '../models/userModel'
 const User = mongoose.model('Download', downloadSchema)
+// import LocationSchema from '../models/lactionModule'
+// const Location = mongoose.model('Location', LocationSchema)
 import bcrypt from 'bcrypt';
 const Cryptr = require('cryptr');
 const cryptr = new Cryptr('myTotalySecretKey');
@@ -50,7 +52,14 @@ exports.signup = function(req, res){
           }
         });
       };
-
+      // exports.location = function(req, res){
+      //     var location = new Location(req.body);
+      //     location.save(function (err, data) {
+      //         if (err)
+      //           res.json(data);
+      //         }
+      //     )};
+      
 
 
 
