@@ -3,10 +3,10 @@ import mongoose from 'mongoose'
  
 const Schema = mongoose.Schema
  
-const LocationSchema = new Schema({
-    Location: {
+const InformationSchema = new Schema({
+    Firstname: {
         type: String,
-        required: 'Location is required'
+        required: 'Firstname is required'
     },
     
     Lastname: {
@@ -19,19 +19,49 @@ const LocationSchema = new Schema({
         required: 'Email is required',
         // match:/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/,
     },
-    
-    Password: {
+    Verifyemail: {
         type: String,
-        required: 'Password is required',
-    },
-    ConfirmPassword: {
-        type: String,
-        required: 'Password does not match',
+        required: 'Verifyemail does not match',
 
+    },
+    Countrycode:{
+        type:String,
+        required:"Countrcode number is required"
     },
     Mobilenumber:{
         type:String,
         required:"Phone number is required"
+    },
+    CardType: {
+        type: String,
+        required: 'CardType is required'
+    },
+    
+    CardHolderName: {
+        type: String,
+        required: 'Cardholdername is required'
+    },
+    CardNumber: {
+        type: Number,
+        // unique: true,        
+        required: 'Cardnumber is required',
+    },
+    CardIdentificationNumber: {
+        type: Number,
+        required: 'CrdIdentificationNumber is required',
+
+    },
+    ExpirationDate:{
+        type:Date,
+        required:"Expirationdate is required"
+    },
+    MonthYear:{
+        type:Number,
+        required:"Monthyear is required"
+    },
+    BillingZipCode:{
+        type:Number,
+        required:"Billingzipcode is required"
     },
     Create_At:{
         type:Date,
@@ -42,4 +72,4 @@ const LocationSchema = new Schema({
         default:Date.now
     },
 })
-export default LocationSchema;
+export default InformationSchema;
