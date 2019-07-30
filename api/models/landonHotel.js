@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
  
 const Schema = mongoose.Schema
  
-const ParisHotel = new Schema({
+const LondonHotel = new Schema({
     Hotelname: {
         type: String,
         required: 'CardType is required'
@@ -36,4 +36,4 @@ const ParisHotel = new Schema({
         default:Date.now
     },
 })
-export default ParisHotel;
+export default LondonHotel;

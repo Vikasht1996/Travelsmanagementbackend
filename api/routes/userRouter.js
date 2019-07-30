@@ -1,7 +1,10 @@
 import { signup,login,} from '../controllers/userController'
 import {location} from '../controllers/locationController'
 import {personalInfo} from '../controllers/personalinfoControler'
-import {cardInfo} from '../controllers/cardControler'
+import {parisInfo} from '../controllers/parisControler'
+import {londonInfo} from '../controllers/londonController'
+import {singaporeInfo} from '../controllers/singaporeController'
+
 
 
 
@@ -16,8 +19,12 @@ const routes = (app) => {
     .post(location)
     app.route('/personinfo')
     .post(personalInfo)
-    // app.route('/cardinfo')
-    // .post(cardInfo)
+    app.route('/parisinfo')
+    .post(parisInfo)
+    app.route('/londoninfo')
+    .post(londonInfo)
+    app.route('/singaporeinfo')
+    .post(singaporeInfo)
     // .delete(delete_Data)
         app.post('/signup',
             // [
