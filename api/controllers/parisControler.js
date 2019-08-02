@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import ParisHotel from '../models/parisHotel'
 const Parisinfo = mongoose.model('Cardinfo', ParisHotel)
 
-exports.list_all_tasks = function(req, res) {
+exports.list_all_paris = function(req, res) {
   Parisinfo.find({}, function(err, data) {
     if (err)
       res.send(err);

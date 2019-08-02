@@ -4,6 +4,11 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
  
 const LondonHotel = new Schema({
+    LocationId:{
+        type:Schema.Types.ObjectId,
+        ref:'locations',
+        required:true
+    },
     Hotelname: {
         type: String,
         required: 'CardType is required'
@@ -26,6 +31,12 @@ const LondonHotel = new Schema({
     Amount:{
         type:Number,
         required:"Expirationdate is required"
+    },
+    Checkin:{
+        type:Date,
+    },
+    Checkout:{
+        type:Date,
     },
     Create_At:{
         type:Date,

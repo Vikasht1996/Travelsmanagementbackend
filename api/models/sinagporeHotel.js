@@ -32,6 +32,12 @@ const SingaporeHotel = new Schema({
         type:Number,
         required:"Expirationdate is required"
     },
+    Checkin:{
+        type:Date,
+    },
+    Checkout:{
+        type:Date,
+    },
     Create_At:{
         type:Date,
         default:Date.now
