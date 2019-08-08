@@ -9,3 +9,11 @@ exports.londonInfo = function(req, res){
           res.json(data);
         }
     )};
+    exports.list_all_london = function(req, res) {
+      Londoninfo.find({}, function(err, data) {
+        if (err)
+          res.send(err);
+        res.json(data);
+      });
+    };
+    

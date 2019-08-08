@@ -4,11 +4,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
  
 const LondonHotel = new Schema({
-    LocationId:{
-        type:Schema.Types.ObjectId,
-        ref:'locations',
-        required:true
-    },
+    
     Hotelname: {
         type: String,
         required: 'CardType is required'

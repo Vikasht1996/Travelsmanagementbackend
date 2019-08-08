@@ -9,3 +9,11 @@ exports.singaporeInfo = function(req, res){
           res.json(data);
         }
     )};
+    exports.list_all_singapore = function(req, res) {
+      Singaporeinfo.find({}, function(err, data) {
+        if (err)
+          res.send(err);
+        res.json(data);
+      });
+    };
+    

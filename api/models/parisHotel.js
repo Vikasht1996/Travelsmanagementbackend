@@ -4,11 +4,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
  
 const ParisHotel = new Schema({
-    LocationId:{
-        type:Schema.Types.ObjectId,
-        ref:'locations',
-        required:true
-    },
+
     Hotelname: {
         type: String,
         required: 'CardType is required'
@@ -32,12 +28,7 @@ const ParisHotel = new Schema({
         type:Number,
         required:"Expirationdate is required"
     },
-    Checkin:{
-        type:Date,
-    },
-    Checkout:{
-        type:Date,
-    },
+    
     Create_At:{
         type:Date,
         default:Date.now

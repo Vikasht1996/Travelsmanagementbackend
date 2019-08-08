@@ -1,9 +1,9 @@
 import { signup,login,} from '../controllers/userController'
-import {location} from '../controllers/locationController'
+import {location, list_all_location} from '../controllers/locationController'
 import {personalInfo} from '../controllers/personalinfoControler'
 import {parisInfo,list_all_paris} from '../controllers/parisControler'
-import {londonInfo} from '../controllers/londonController'
-import {singaporeInfo} from '../controllers/singaporeController'
+import {londonInfo,list_all_london} from '../controllers/londonController'
+import {singaporeInfo,list_all_singapore} from '../controllers/singaporeController'
 const { check,validationResult } = require('express-validator/check')
 
 // import { check ,validationResult} from 'express-validator/check'
@@ -13,15 +13,20 @@ const routes = (app) => {
     .post(login)
     app.route('/location')
     .post(location)
+    .get(list_all_location)
     app.route('/personinfo')
     .post(personalInfo)
     app.route('/parisinfo')
     .post(parisInfo)
+    app.route('/p')
     .get(list_all_paris)
     app.route('/londoninfo')
     .post(londonInfo)
+    .get(list_all_london)
     app.route('/singaporeinfo')
     .post(singaporeInfo)
+    .get(list_all_singapore)
+
     // .delete(delete_Data)
         app.post('/signup',
             // [
