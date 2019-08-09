@@ -10,19 +10,12 @@ exports.location = function(req, res){
         }
     )};
     exports.list_all_location = function(req, res) {
-      console.log(req)
-      Location.find({LocationName:req.query['LocationName']})
-      .then(user => {
-        if (user) {
-        res.json(user)
-        } else {
-        res.send("User does not exist")
-        }
-        })
-        .catch(err => {
-        res.send('error: ' + err)
-        })
-        }
+      Location.find({}, function(err, data) {
+        if (err)
+          res.send(err);
+        res.json(data);
+      });
+    };
         
 
     // profile.get('/studentProfile', (req, res) => {
