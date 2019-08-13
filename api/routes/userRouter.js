@@ -3,6 +3,8 @@ import {location, list_all_location} from '../controllers/locationController'
 import {personalInfo} from '../controllers/personalinfoControler'
 import {parisInfo,list_all_paris} from '../controllers/parisControler'
 import {londonInfo,list_all_london} from '../controllers/londonController'
+import {reviewInfo} from '../controllers/reviewControler'
+
 import {singaporeInfo,list_all_singapore} from '../controllers/singaporeController'
 const { check,validationResult } = require('express-validator/check')
 
@@ -26,6 +28,8 @@ const routes = (app) => {
     app.route('/singaporeinfo')
     .post(singaporeInfo)
     .get(list_all_singapore)
+    app.route('/reviewinfo')
+    .post(reviewInfo)
 
     // .delete(delete_Data)
         app.post('/signup',
